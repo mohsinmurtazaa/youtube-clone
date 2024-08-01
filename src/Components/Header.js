@@ -45,6 +45,7 @@ const Header = () => {
       clearTimeout(timer);
     };
   }, [searchText]);
+
   return (
     <div className="grid p-2 grid-flow-col shadow ">
       <div className="flex col-span-1 ">
@@ -71,7 +72,11 @@ const Header = () => {
           className="w-1/2  p-2 border border-gray-400 rounded-l-full"
           onChange={(e) => setSearchText(e.target.value)}
           onFocus={() => setShowSugeestion(true)}
-          onBlur={() => setShowSugeestion(false)}
+          onBlur={() =>
+            setTimeout(() => {
+              setShowSugeestion(false);
+            }, 200)
+          }
         />
         <button className="py-2 px-5 border border-gray-400 rounded-r-full bg-gray-100">
           🔍
@@ -80,9 +85,11 @@ const Header = () => {
           <div className="absolute bg-white py-2 px-5 rounded-lg shadow-lg w-1/3">
             <ul>
               {suggestions.map((s) => (
-                <li key={s} className="p-2 shadow-sm hover:bg-gray-200">
-                  🔎 {s}
-                </li>
+                <Link to={"/search-result/" + s}>
+                  <li key={s} className="p-2 shadow-sm hover:bg-gray-200">
+                    🔎 {s}
+                  </li>
+                </Link>
               ))}
             </ul>
           </div>

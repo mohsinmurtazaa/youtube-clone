@@ -11,7 +11,7 @@ export const YOUTUBE_VIDEO_COMMENTS_API =
   "https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&videoId=_VB39Jo8mAQ&key=";
 
 export const YOUTUBE_SEARCH_VIDEO_BY_KEYWORD =
-  "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=";
+  "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=javascript&key=";
 
 export const COMMENTS_DATA = [
   {
