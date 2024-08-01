@@ -1,7 +1,6 @@
 import React from "react";
 
 const SearchCard = ({ data }) => {
-  console.log("data", data);
   const { snippet } = data || {};
   const { thumbnails, channelTitle, title, description } = snippet || {};
 

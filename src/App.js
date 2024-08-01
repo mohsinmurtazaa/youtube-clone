@@ -4,6 +4,7 @@ import "./App.css";
 import Body from "./Components/Body";
 import Header from "./Components/Header";
 import MainContainer from "./Components/MainContainer";
+import SearchResult from "./Components/SearchResult";
 import WatchPage from "./Components/WatchPage";
 import appStore from "./utils/store";
 const appRoute = createBrowserRouter([
@@ -23,6 +24,10 @@ const appRoute = createBrowserRouter([
       {
         path: "watch",
         element: <WatchPage />,
+      },
+      {
+        path: "/search-result/:query",
+        element: <SearchResult />,
       },
     ],
   },
