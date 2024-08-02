@@ -77,6 +77,8 @@ export const COMMENTS_DATA = [
   },
 ];
 
+export const LIVE_CHAT_COUNT = 10;
+
 // const getComments = async () => {
 //   const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
 //   const videoId = params.get("v"); // Replace with your method of getting the video ID
